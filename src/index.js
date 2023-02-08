@@ -60,10 +60,12 @@ auth.onAuthStateChanged((user) => {
           `;
     document.getElementById("auth").innerHTML = signOutMessage;
     console.log("login now!!");
+    document.querySelector("body > h1").innerHTML = "ナイスログイン";
   } else {
     const signInMessage = `
             <button type="submit" onClick="signIn()">sign in<\/button>
             `;
     document.getElementById("auth").innerHTML = signInMessage;
+    document.querySelector("body > h1").innerHTML = "ログインを...しろ！！！";
   }
 });
