@@ -9,6 +9,8 @@ module.exports = {
   },
   devtool: "eval-source-map",
   plugins: [
+    // ここで指定すると実行環境の環境変数をJSモジュール内で参照できる
+    // e.g. process.env.API_KEY, process.env.AUTH_DOMAIN, ...
     new webpack.EnvironmentPlugin([
       "API_KEY",
       "AUTH_DOMAIN",
