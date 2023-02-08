@@ -3,6 +3,8 @@ const webpack = require("webpack");
 const dotenv = require("dotenv");
 const env = dotenv.config().parsed;
 
+console.log(process.env.NODE_ENV)
+
 module.exports = {
   entry: "./src/index.js",
   output: {
