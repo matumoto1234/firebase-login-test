@@ -41,11 +41,11 @@ window.signOut = function () {
     auth
       .signOut()
       .then(() => {
-        console.log("ログアウトしました");
+        console.log("logout!!");
         location.reload();
       })
       .catch((error) => {
-        console.log(`ログアウト時にエラーが発生しました (${error})`);
+        console.log(`error occurred in logout! ${error}`);
       });
   });
 };
@@ -54,13 +54,13 @@ auth.onAuthStateChanged((user) => {
   if (user) {
     const signOutMessage = `
           <p>Hello, ${user.displayName}!<\/p>
-          <button class="btn btn-primary" type="submit"  onClick="signOut()">サインアウト<\/button>
+          <button class="btn btn-primary" type="submit"  onClick="signOut()">sign out<\/button>
           `;
     document.getElementById("auth").innerHTML = signOutMessage;
-    console.log("ログインしています");
+    console.log("login now!!");
   } else {
     const signInMessage = `
-            <button class="btn btn-primary" type="submit"  onClick="signIn()">サインイン<\/button>
+            <button class="btn btn-primary" type="submit"  onClick="signIn()">sign in<\/button>
             `;
     document.getElementById("auth").innerHTML = signInMessage;
   }
