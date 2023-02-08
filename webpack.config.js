@@ -1,5 +1,4 @@
 const path = require("path");
-const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -9,6 +8,5 @@ module.exports = {
   },
   devtool: "eval-source-map",
   plugins: [
-    new Dotenv(),
   ],
 };
