@@ -1,9 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
-const dotenv = require("dotenv");
-const env = dotenv.config().parsed;
-
-console.log(process.env.NODE_ENV)
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -13,8 +9,6 @@ module.exports = {
   },
   devtool: "eval-source-map",
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env": JSON.stringify(env),
-    }),
+    new Dotenv(),
   ],
 };
